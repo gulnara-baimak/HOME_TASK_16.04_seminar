@@ -1,0 +1,25 @@
+// Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее. 
+// a = 5; b = 7 -> max = 7
+// a = 2 b = 10 -> max = 10
+// a = -9 b = -3 -> max = -3
+
+System.Console.WriteLine();
+
+string[] txtNumber = { "первое", "второе" };
+int[] number = new int[2];
+
+for (int i = 0; i < 2; i++)
+{
+    System.Console.WriteLine($"Введите {txtNumber[i]} число:");
+    string Number = Console.ReadLine();
+    number[i] = Convert.ToInt32(Number);
+}
+int max = number.Max();
+int min = number.Min();
+
+if (max == min) System.Console.WriteLine("Введённые числа равны");
+{
+    System.Console.WriteLine($"Большее число {max}, меньшее число {min}");
+}
+System.Console.WriteLine();
+
